@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-button class="btn-back no-background" (click)="toHome()">
+      <ion-img class="IMG-DUOC" src="assets/imagenes/logo_duoc.png"></ion-img>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Nombre del Alumno</ion-label>
+      <ion-input [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">RUT</ion-label>
+      <ion-input [(ngModel)]="rut"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Correo Institucional</ion-label>
+      <ion-input [(ngModel)]="correoInstitucional"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Fecha de Nacimiento</ion-label>
+      <ion-input type="date" [(ngModel)]="fechaNacimiento"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Domicilio</ion-label>
+      <ion-input [(ngModel)]="domicilio"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="guardarRegistro()">Guardar Registro</ion-button>
+  <ion-footer>
+    <ion-toolbar>
+      <div class="copyright">© {{ currentYear }} Derechos reservados por ACE CORPORATION</div>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
